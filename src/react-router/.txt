@@ -1,5 +1,0 @@
-React Router
-
-Multi-page portfolio (Home, About, Projects pages)
-Blog with a list page and a detail page (/posts/:id)
-404 not found page
