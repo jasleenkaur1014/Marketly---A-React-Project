@@ -1,0 +1,7 @@
+Switching to functional + hooks
+
+Rebuild your counter using useState ✅
+Rebuild your todo list using useState ✅
+Fetch and display a list from an API using useEffect ✅
+Debounced search using useEffect ✅
+Custom hook — useFetch(url) that any component can reuse

@@ -1,0 +1,14 @@
+Class based basics
+
+Counter (increment, decrement, reset) ✅
+Todo list (add, delete, mark done) ✅
+Search filter — already done ✅
+Form with validation (name, email, password) ✅
+Show/hide password toggle ✅
+Accordion (expand/collapse sections) ✅
+
+Lifecycle methods (only in class based)
+
+Weather app using an API — teaches componentDidMount for fetching data✅
+Auto-saving form — teaches componentDidUpdate ✅
+Timer/stopwatch — teaches componentWillUnmount for cleanup ✅

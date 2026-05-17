@@ -1,0 +1,5 @@
+Context API
+
+Theme switcher (dark/light mode across whole app)
+Cart system (add to cart from any page, show count in navbar)
+Logged in user info shared across pages
