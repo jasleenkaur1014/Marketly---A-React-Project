@@ -1,7 +1,8 @@
 import styled from "styled-components";
+import { useAppContext } from "../appContext";
 
-export default function Users(props) {
-  const { data, loading, page, setPage } = props;
+export default function Users() {
+  const { data, loading, page, setPage } = useAppContext();
   if (loading) {
     return <h2>Loading...</h2>;
   }
