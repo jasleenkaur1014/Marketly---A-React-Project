@@ -1,10 +1,12 @@
+import { useAppContext } from "../appContext";
 import ModalWrapper from "./ModalWrapper";
 import styled from "styled-components";
 export default function Cart(props) {
+  const { cartItems, setOpenedModal, setCartItems } = useAppContext();
   return (
-    <ModalWrapper onClose={() => props.setOpenedModal("")}>
+    <ModalWrapper onClose={() => setOpenedModal("")}>
       <h2>Your Cart</h2>
-      {props.cartItems.map((item) => (
+      {cartItems.map((item) => (
         <Card key={item.id}>
           <img src={item.images?.[0]} alt={item.title} />
           <h4>{item.title}</h4>
@@ -18,9 +20,7 @@ export default function Cart(props) {
           <p>Rating: {item.rating}</p>
           <button
             onClick={() => {
-              props.setCartItems(
-                props.cartItems.filter((i) => i.id !== item.id),
-              );
+              setCartItems(cartItems.filter((i) => i.id !== item.id));
             }}
           >
             Remove from Cart
