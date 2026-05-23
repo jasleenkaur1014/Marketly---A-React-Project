@@ -1,7 +1,9 @@
 import styled from "styled-components";
+import { useAppContext } from "../appContext";
 
-export default function Posts(props) {
-  const { data, loading, setLikedPosts, likedPosts, setPage, page } = props;
+export default function Posts() {
+  const { data, loading, setLikedPosts, likedPosts, setPage, page } =
+    useAppContext();
   if (loading) {
     return <h3>Loading....</h3>;
   }
