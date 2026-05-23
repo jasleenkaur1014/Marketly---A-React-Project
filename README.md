@@ -24,15 +24,7 @@ with debounce and pagination across all sections.
 - Custom Hook (useFetch)
 - Styled Components
 - DummyJSON API
-
-## Concepts Covered
-- Custom hooks
-- useEffect with multiple dependencies
-- Props drilling
-- Reusable components
-- Dynamic API URLs
-- Pagination
-- Debounced search
+- Context Api
 
 ## How to Run
 ```bash
