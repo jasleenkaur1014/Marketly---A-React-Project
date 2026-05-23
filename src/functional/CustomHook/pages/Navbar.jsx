@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
+import { useAppContext } from "../appContext";
 
-export default function Navbar(props) {
+export default function Navbar() {
+  const { search, setSearch, setOpenedModal } = useAppContext();
   const [isVisible, setVisible] = useState(false);
 
   return (
@@ -11,8 +13,8 @@ export default function Navbar(props) {
       <input
         type="text"
         placeholder="Search here..."
-        value={props.search}
-        onChange={(e) => props.setSearch(e.target.value)}
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
       />
 
       <MenuWrapper>
@@ -25,7 +27,7 @@ export default function Navbar(props) {
 
           <P
             onClick={() => {
-              props.setOpenedModal("cart");
+              setOpenedModal("cart");
               setVisible(false);
             }}
           >
@@ -34,7 +36,7 @@ export default function Navbar(props) {
 
           <P
             onClick={() => {
-              props.setOpenedModal("liked");
+              setOpenedModal("liked");
               setVisible(false);
             }}
           >
@@ -43,7 +45,7 @@ export default function Navbar(props) {
 
           <P
             onClick={() => {
-              props.setOpenedModal("saved");
+              setOpenedModal("saved");
               setVisible(false);
             }}
           >
