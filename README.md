@@ -1,36 +1,29 @@
 # Marketly Shop
 
-A multi-section dashboard app built with React functional components.
+A multi-section shopping dashboard built with React — browse products, 
+read posts, explore recipes, and view customers, all in one place.
 
-## Description
-Marketly Shop is a multi-section dashboard app where users can browse 
-products, read posts, explore recipes and view customers. Users can add 
-products to cart, like posts and save recipes — all managed through a 
-clean modal system. Built using a single custom useFetch hook that handles 
-all API calls dynamically based on the selected section. Supports search 
-with debounce and pagination across all sections.
+🔗 [Live Demo](https://marketly-shop.netlify.app)
 
 ## Features
-- Browse products, posts, recipes and users
+- Browse products, posts, recipes, and users
 - Add products to cart
 - Like posts and save recipes
-- Search with debounce
-- Pagination
-- Hamburger menu with smooth animation
-- Modal system with reusable ModalWrapper
+- Debounced search and pagination across all sections
+- Detail view modals for each section
+- Responsive hamburger menu with smooth animation
 
 ## Tech Stack
-- React (Functional Components + Hooks)
-- Custom Hook (useFetch)
+- React 19 (Functional Components + Hooks)
+- Context API for state management
+- Custom `useFetch` hook for all API calls
 - Styled Components
 - DummyJSON API
-- Context Api
+- Vite
 
-## How to Run
-```bash
+## Getting Started
 npm install
 npm run dev
-```
 
 ## Author
-Jasleen
+[Jasleen](https://github.com/jasleenkaur1014)
