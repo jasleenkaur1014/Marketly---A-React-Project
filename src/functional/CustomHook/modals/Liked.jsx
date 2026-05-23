@@ -1,8 +1,9 @@
 import ModalWrapper from "./ModalWrapper";
 import styled from "styled-components";
+import { useAppContext } from "../appContext";
 
-export default function Liked(props) {
-  const { likedPosts, setLikedPosts, setOpenedModal } = props;
+export default function Liked() {
+  const { likedPosts, setLikedPosts, setOpenedModal } = useAppContext();
   return (
     <ModalWrapper onClose={() => setOpenedModal("")}>
       <h2>Your Posts</h2>
@@ -64,3 +65,4 @@ const Card = styled.div`
     cursor: pointer;
   }
 `;
+
