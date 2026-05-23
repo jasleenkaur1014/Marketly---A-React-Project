@@ -1,8 +1,9 @@
 import { useState } from "react";
 import styled from "styled-components";
+import { useAppContext } from "../appContext";
 
-export default function Sidebar(props) {
-  const { select, setSelect } = props;
+export default function Sidebar() {
+  const { select, setSelect } = useAppContext();
   return (
     <>
       <Div>
