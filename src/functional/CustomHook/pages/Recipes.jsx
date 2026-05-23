@@ -1,7 +1,9 @@
 import styled from "styled-components";
+import { useAppContext } from "../appContext";
 
-export default function Recipes(props) {
-  const { data, loading, setSavedRecipes, savedRecipes, page, setPage } = props;
+export default function Recipes() {
+  const { data, loading, setSavedRecipes, savedRecipes, page, setPage } =
+    useAppContext();
 
   if (loading) return <h3>Loading....</h3>;
 
