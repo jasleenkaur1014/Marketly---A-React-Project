@@ -1,8 +1,9 @@
+import { useAppContext } from "../appContext";
 import ModalWrapper from "./ModalWrapper";
 import styled from "styled-components";
 
-export default function Saved(props) {
-  const { setOpenedModal, savedRecipes, setSavedRecipes } = props;
+export default function Saved() {
+  const { setOpenedModal, savedRecipes, setSavedRecipes } = useAppContext();
   return (
     <ModalWrapper onClose={() => setOpenedModal("")}>
       <h2>Your Saved</h2>
