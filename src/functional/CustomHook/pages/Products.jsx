@@ -1,8 +1,10 @@
 import styled from "styled-components";
 
 import React from "react";
-export default function Products(props) {
-  const { data, loading, setCartItems, cartItems, page, setPage } = props;
+import { useAppContext } from "../appContext";
+export default function Products() {
+  const { data, loading, setCartItems, cartItems, page, setPage } =
+    useAppContext();
   if (loading) {
     return <h3>Loading....</h3>;
   }
