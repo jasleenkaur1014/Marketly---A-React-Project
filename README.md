@@ -12,6 +12,7 @@ read posts, explore recipes, and view customers, all in one place.
 - Debounced search and pagination across all sections
 - Detail view modals for each section
 - Responsive hamburger menu with smooth animation
+- Client Side Routing
 
 ## Tech Stack
 - React 19 (Functional Components + Hooks)
@@ -20,6 +21,7 @@ read posts, explore recipes, and view customers, all in one place.
 - Styled Components
 - DummyJSON API
 - Vite
+- React Routing 
 
 ## Getting Started
 npm install
