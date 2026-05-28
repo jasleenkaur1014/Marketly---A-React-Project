@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
 import { useAppContext } from "../appContext";
+import { Link, NavLink } from "react-router-dom";
 
 export default function Sidebar() {
   const { select, setSelect } = useAppContext();
@@ -8,31 +9,19 @@ export default function Sidebar() {
     <>
       <Div>
         <h2>SIDEBAR</h2>
-        <MenuItem
-          $active={select === "products"}
-          onClick={() => setSelect("products")}
-        >
+        <StyledLink to="/products" onClick={() => setSelect("products")}>
           Catalog 🛍️
-        </MenuItem>
+        </StyledLink>
 
-        <MenuItem
-          $active={select === "posts"}
-          onClick={() => setSelect("posts")}
-        >
+        <StyledLink to="/posts" onClick={() => setSelect("posts")}>
           Feed 📰
-        </MenuItem>
-        <MenuItem
-          $active={select === "recipes"}
-          onClick={() => setSelect("recipes")}
-        >
+        </StyledLink>
+        <StyledLink to="/recipes" onClick={() => setSelect("recipes")}>
           Recipes 🍔
-        </MenuItem>
-        <MenuItem
-          $active={select === "users"}
-          onClick={() => setSelect("users")}
-        >
+        </StyledLink>
+        <StyledLink to="/users" onClick={() => setSelect("users")}>
           Customers 👥
-        </MenuItem>
+        </StyledLink>
 
         <p>━━━━</p>
         <small style={{ fontSize: "10px" }}>&copy; Jasleen</small>
@@ -54,17 +43,23 @@ const Div = styled.div`
   height: 100vh;
 `;
 
-const MenuItem = styled.button`
-  border: none;
-  background: ${({ $active }) => ($active ? "#d6d6d6" : "transparent")};
+const StyledLink = styled(NavLink)`
+  text-decoration: none;
+  color: black;
 
-  font-weight: ${({ $active }) => ($active ? "700" : "500")};
-
-  cursor: pointer;
   padding: 8px;
   border-radius: 6px;
+  transition: 0.2s;
+  cursor: pointer;
 
   &:hover {
     transform: scale(1.05);
+    background: #dcdcdc;
+  }
+
+  &.active {
+    color: red;
+    background: #d6d6d6;
+    font-weight: 700;
   }
 `;
